@@ -92,7 +92,7 @@
         <h1 class="name">Wairimu Max Murage.</h1>
         <h1 class="subtitle">Software Developer | Full-Stack &amp; Healthcare IT Systems.</h1>
         <p class="description">
-            I am a Bachelor of Science in Information Technology student graduating in 2026 with hands-on software development experience building secure, full-stack web systems. I specialize in Laravel, secure data pipelines, and healthcare IT solutions.
+            I am a Bachelor of Science in Information Technology graduate with hands-on software development experience building secure, full-stack web systems. I specialize in Laravel, secure data pipelines, and healthcare IT solutions.
         </p>
         <div class="hero-actions">
             <a href="#projects" class="btn btn-primary">View My Work</a>
@@ -157,7 +157,7 @@
         <h2 class="section-title">About Me</h2>
         <div class="about-grid">
             <div class="about-text">
-                                                            <p>I am a Bachelor of Science in Information Technology student at <strong>Jomo Kenyatta University of Agriculture and Technology (JKUAT)</strong> graduating in August 2026 with hands-on software development experience building secure, full-stack web systems.</p>
+                                                            <p>I am a Bachelor of Science in Information Technology graduate from <strong>Jomo Kenyatta University of Agriculture and Technology (JKUAT)</strong> with hands-on software development experience building secure, full-stack web systems.</p>
                                             <p>I designed and built a Laravel-based Hospital Management and Patient Triage System featuring custom security middleware, automated clinical validation logic, and audit-grade traceability — work that sharpened my thinking around data integrity, input validation, and system trust at the architecture level.</p>
                                             <p>My technical foundation spans Java, TypeScript, JavaScript, PHP, Python, and core web technologies (HTML, CSS), and I am comfortable working across the stack: backend logic, securing data pipelines against injection and scripting attacks, and shaping usable front-end interfaces.</p>
                                             <p>A three-month ICT attachment in a national referral hospital (KUTRRH) further strengthened my understanding of system reliability, end-user support, and working within regulated, high-responsibility environments. I bring strong documentation habits, clear communication, and a security-conscious approach to development.</p>
@@ -274,6 +274,15 @@
                                             <li>Computer Maintenance &amp; Troubleshooting</li>
                                             <li>HCI Principles &amp; Usability Testing</li>
                                             <li>Git, VS Code &amp; Linux Environments</li>
+                                    </ul>
+            </div>
+                        <div class="skill-category card">
+                <h3>Soft Skills &amp; Methods</h3>
+                <ul class="skill-list">
+                                            <li>Problem Solving &amp; Logic Validation</li>
+                                            <li>Communication &amp; Cross-Team Collaboration</li>
+                                            <li>Time Management &amp; Deadline Prioritization</li>
+                                            <li>Adaptability &amp; Independent Learning</li>
                                     </ul>
             </div>
                     </div>
@@ -464,7 +473,7 @@
     <div class="container">
         <h2 class="section-title">Engineering Case Studies</h2>
 
-                <div class="project-featured ">
+                <div class="project-featured  ">
             <div class="project-content">
                 <p class="project-overline">Backend Architecture &amp; Clinical Interoperability</p>
                 <h3 class="project-title">Secure Hospital Management &amp; Middleware System</h3>
@@ -491,11 +500,11 @@
                     </a>
                 </div>
             </div>
-            <div class="project-image">
-                <img src="images/middleware.png" alt="Secure Hospital Management &amp; Middleware System" class="project-img">
+                        <div class="project-image">
+                <img src="images/middleware.jpg" alt="Secure Hospital Management &amp; Middleware System" class="project-img">
             </div>
-        </div>
-                <div class="project-featured reverse">
+                    </div>
+                <div class="project-featured reverse ">
             <div class="project-content">
                 <p class="project-overline">Security &amp; Data Validation Engine</p>
                 <h3 class="project-title">Patient Triage &amp; Validation Engine</h3>
@@ -521,57 +530,74 @@
                     </a>
                 </div>
             </div>
-            <div class="project-image">
+                        <div class="project-image">
                 <img src="images/triage.png" alt="Patient Triage &amp; Validation Engine" class="project-img">
             </div>
-        </div>
+                    </div>
         
     </div>
 </section>
 
 <style>
 .project-featured {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    display: flex;
     align-items: center;
-    margin-bottom: 6rem;
+    gap: 3rem;
+    margin-bottom: 5rem;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-featured:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 40px -15px rgba(20, 184, 166, 0.2);
+}
+
+.project-featured.reverse {
+    flex-direction: row-reverse;
 }
 
 .project-content {
-    grid-column: 1 / 7;
-    grid-row: 1 / -1;
-    position: relative;
-    z-index: 2;
+    flex: 1;
+    min-width: 0;
 }
 
-.project-featured.reverse .project-content {
-    grid-column: 7 / -1;
-    text-align: right;
+.project-image {
+    flex: 0 0 42%;
+    max-width: 42%;
+}
+
+.project-featured.no-image .project-content {
+    flex: 1;
 }
 
 .project-overline {
     color: var(--accent-color);
     font-family: var(--font-main);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .project-title {
     color: var(--text-primary);
-    font-size: 1.75rem;
+    font-size: 1.6rem;
     margin-bottom: 1.5rem;
+    line-height: 1.2;
 }
 
 .project-description {
     padding: 1.5rem;
-    background-color: var(--bg-surface);
+    background-color: var(--bg-color);
     color: var(--text-secondary);
     border-radius: 0.5rem;
-    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
-    margin-bottom: 1.5rem;
     border: 1px solid var(--border-color);
-    text-align: left;
+    margin-bottom: 1.5rem;
 }
 
 .case-study-section {
@@ -598,6 +624,7 @@
     background-color: var(--accent-color);
     border-radius: 50%;
     margin-right: 8px;
+    flex-shrink: 0;
 }
 
 .case-study-section p {
@@ -608,16 +635,19 @@
 .project-tech-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 0.75rem;
     list-style: none;
     margin-bottom: 1.5rem;
-    color: var(--text-secondary);
     font-family: var(--font-main);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
-.project-featured.reverse .project-tech-list {
-    justify-content: flex-end;
+.project-tech-list li {
+    color: var(--accent-color);
+    background-color: rgba(20, 184, 166, 0.1);
+    border: 1px solid rgba(20, 184, 166, 0.2);
+    padding: 0.2rem 0.75rem;
+    border-radius: 1rem;
 }
 
 .project-links a {
@@ -629,48 +659,33 @@
     color: var(--accent-color);
 }
 
-.project-image {
-    grid-column: 6 / -1;
-    grid-row: 1 / -1;
-    position: relative;
-    z-index: 1;
-}
-
-.project-featured.reverse .project-image {
-    grid-column: 1 / 8;
-}
-
 .project-img {
     width: 100%;
-    border-radius: 0.5rem;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 0.75rem;
     border: 1px solid var(--border-color);
-    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
     transition: all 0.3s ease;
-    filter: brightness(0.95);
+    display: block;
 }
 
 .project-image:hover .project-img {
-    filter: brightness(1);
     border-color: var(--accent-color);
-    transform: translateY(-5px);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px -10px rgba(20, 184, 166, 0.25);
 }
 
 @media (max-width: 768px) {
-    .project-content {
-        grid-column: 1 / -1;
-        padding: 2rem;
-        text-align: left;
-    }
-    .project-featured.reverse .project-content {
-        text-align: left;
+    .project-featured,
+    .project-featured.reverse {
+        flex-direction: column;
     }
     .project-image {
-        grid-column: 1 / -1;
-        opacity: 0.1;
+        flex: none;
+        max-width: 100%;
+        width: 100%;
     }
-    .project-featured.reverse .project-tech-list {
-        justify-content: flex-start;
-    }
+    .project-title { font-size: 1.3rem; }
 }
 </style>
 
@@ -682,10 +697,26 @@
                         <div class="card">
                 <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 0.5rem;">
                     <h3 style="color: var(--text-primary); font-size: 1.3rem;">Bachelor of Science in Information Technology</h3>
-                    <span class="cert-date">Expected Graduation: August 2026</span>
+                    <span class="cert-date">Graduated: August 14, 2026</span>
                 </div>
                 <h4 style="color: var(--accent-color); margin-bottom: 1rem; font-weight: 500;">Jomo Kenyatta University of Agriculture and Technology (JKUAT) — Nairobi, Kenya</h4>
                                     <p style="color: var(--text-secondary);"><strong>Key Coursework:</strong> Software Development, Computer Networks, Database Systems, Systems Analysis &amp; Design</p>
+                            </div>
+                        <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 0.5rem;">
+                    <h3 style="color: var(--text-primary); font-size: 1.3rem;">Kenya Certificate of Secondary Education (KCSE)</h3>
+                    <span class="cert-date">2022</span>
+                </div>
+                <h4 style="color: var(--accent-color); margin-bottom: 1rem; font-weight: 500;">Kanjuri High School | Kenya</h4>
+                                    <p style="color: var(--text-secondary);"><strong>Key Coursework:</strong> Grade: B+ (Strong performance in Mathematics and Sciences)</p>
+                            </div>
+                        <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 0.5rem;">
+                    <h3 style="color: var(--text-primary); font-size: 1.3rem;">Kenya Certificate of Primary Education (KCPE)</h3>
+                    <span class="cert-date">2010 - 2018</span>
+                </div>
+                <h4 style="color: var(--accent-color); margin-bottom: 1rem; font-weight: 500;">Nyamachaki Primary School | Kenya</h4>
+                                    <p style="color: var(--text-secondary);"><strong>Key Coursework:</strong> Score: 327</p>
                             </div>
                     </div>
     </div>
@@ -801,6 +832,7 @@
                     <h3 style="color: var(--text-primary); margin-bottom: 0.75rem;">Direct Contact</h3>
                     <p style="margin-bottom: 0.5rem;"><strong>Email:</strong> <a href="mailto:wairimumax1@gmail.com">wairimumax1@gmail.com</a></p>
                     <p style="margin-bottom: 0.5rem;"><strong>Phone:</strong> <a href="tel:+254703115896">+254 703 115 896</a></p>
+                    <p style="margin-bottom: 0.5rem;"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/max-murage-a21233383/" target="_blank">Max Murage</a></p>
                     <p style="margin-bottom: 0;"><strong>Location:</strong> Nairobi, Kenya</p>
                 </div>
             </div>
